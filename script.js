@@ -1,10 +1,11 @@
 document.getElementById('btn').addEventListener('click', function() {
-    let inputValue = document.getElementById('ip').value;
+    let inputValue = Number(document.getElementById('ip').value); // Convert string to number
 
     // Start the promise chain
     new Promise((resolve, reject) => { 
         setTimeout(() => resolve(inputValue), 2000); 
     })
+    // Rest of your code
     .then(value => {
         let multipliedValue = value * 2;
         document.getElementById('output').innerHTML = 'Result: ' + multipliedValue;
